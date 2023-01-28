@@ -5,6 +5,7 @@ import project3 from '../../assets/Project (3).jpg'
 import project4 from '../../assets/Project (4).jpg'
 import project5 from '../../assets/Project (5).jpg'
 import project6 from '../../assets/Project (6).jpg'
+import project7 from '../../assets/Project7.jpg'
 import './Protfolio.css'
 
 const Protfolio = () => {
@@ -49,6 +50,13 @@ const Protfolio = () => {
             image:project6,
             gitHub:'https://github.com/Jony120455/dev-web-repo',
             liveDemo:'https://web-dev-net.netlify.app/'
+        },
+        {
+            id:7,
+            title:'Solutation and Discuss',
+            image:project7,
+            gitHub:'https://github.com/Jony120455/solutation',
+            liveDemo:'https://solution-add.netlify.app/'
         },
     ]
     return (
