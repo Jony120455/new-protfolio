@@ -8,10 +8,13 @@ import project6 from '../../assets/Project (6).jpg'
 import project7 from '../../assets/Project7.jpg'
 import './Protfolio.css'
 
+import Data from './Data';
+
 const Protfolio = () => {
     const data = [
         {
             id:1,
+            title:'Travel agency website',
             image:project1,
             gitHub:'https://github.com/Jony120455/contest',
             liveDemo:'https://contest-cit.netlify.app/'
@@ -59,29 +62,24 @@ const Protfolio = () => {
             liveDemo:'https://solution-add.netlify.app/'
         },
     ]
+    
     return (
         <section id='protfolio'>
             <h5>My recent work</h5>
             <h2>Protfolio</h2>
             <div className='container protfolio_container'>
-               
-               {
-                data.map(({id,title, image,gitHub,liveDemo}) =>{
-                   return(
-                    <article key={id} className='protfolio_item'>
-                    <div className='protfolio_item-image'>
-                        <img src={image} alt=""></img>
-                    </div>
-                    <h3>{title}</h3>
-                     <div className='protfolio_item-cta'>
-                        <a href={gitHub} className='btn' rel="noreferrer" target='_blank'>Github</a>
-                        <a href={liveDemo} className='btn btn-primary'rel="noreferrer" target='_blank'>Live Demo</a>
-                     </div>
-                </article>
-
-                   )
-                })
-               }
+              
+              
+              
+                {
+                    data.map(data => <Data
+                    
+                    id={data.id}
+                    data={data}
+                    
+                    ></Data>)
+                }
+              
             </div>
             
         </section>
