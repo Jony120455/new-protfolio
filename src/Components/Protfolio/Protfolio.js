@@ -6,6 +6,7 @@ import project4 from '../../assets/Project (4).jpg'
 import project5 from '../../assets/Project (5).jpg'
 import project6 from '../../assets/Project (6).jpg'
 import project7 from '../../assets/Project7.jpg'
+import project8 from '../../assets/Project8.jpg'
 import './Protfolio.css'
 
 import Data from './Data';
@@ -60,6 +61,13 @@ const Protfolio = () => {
             image:project7,
             gitHub:'https://github.com/Jony120455/solutation',
             liveDemo:'https://solution-add.netlify.app/'
+        },
+        {
+            id:8,
+            title:'Defi.Trending Protocol',
+            image:project8,
+            gitHub:'https://github.com/Jony120455/defi.',
+            liveDemo:'https://defi-f.netlify.app/'
         },
     ]
     
