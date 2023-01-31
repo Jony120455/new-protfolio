@@ -8,6 +8,12 @@ header{
     height: 100%;
     position: relative;
 }
+.name{
+    display: inline-block;
+}
+.name:hover{
+    color: #4db5ff;
+}
 .cta{
     display: flex;
     gap: 1.5rem;

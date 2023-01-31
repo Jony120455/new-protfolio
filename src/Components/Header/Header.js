@@ -4,14 +4,22 @@ import jony from '../../assets/jony.png'
 import HeaderSocial from './HeaderSocial';
 import './Header.css'
 import { motion } from "framer-motion"
+import Name from './Name';
 
 
 const Header = () => {
+    const names = "Jony Hossain".split("")
     return (
         <header>
             <div className='container header_container'>
-            <h5>Hellow Im</h5>
-            <h1>Jony Hossain</h1>
+            <h5>Hellow I am</h5>
+                {
+                    names.map((name, id) =>{
+                        return(
+                            <Name key={id}>{name === " " ?"\u00A0":name}</Name>
+                        )
+                    })
+                }
             <h5>Front End web developer</h5>
             <Cta></Cta>
             <HeaderSocial></HeaderSocial>
