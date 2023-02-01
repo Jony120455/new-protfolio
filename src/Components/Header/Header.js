@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Cta from './Cta';
 import jony from '../../assets/jony.png'
 import HeaderSocial from './HeaderSocial';
 import './Header.css'
-import { motion } from "framer-motion"
+import { motion,useAnimationFrame } from "framer-motion"
 import Name from './Name';
 
 
 const Header = () => {
     const names = "Jony Hossain".split("")
+
+    const ref = useRef(null);
+
+    useAnimationFrame((t) => {
+        const y = (1 + Math.sin(t / 1000)) * 50;
+        ref.current.style.transform = `translateY(${y}px) `;
+      });
     return (
         <header>
             <div className='container header_container'>
@@ -42,8 +49,8 @@ const Header = () => {
              >
                 <img src={jony} alt=''></img>
             </motion.div>
-            <div>
-                <a href='#footer' className='scroll_down'>Scroll Down</a>
+            <div className='scroll_down1' ref={ref}>
+                <a  href='#footer' className='scroll_down'>Scroll Down</a>
             </div>
         </div>
         </header>
