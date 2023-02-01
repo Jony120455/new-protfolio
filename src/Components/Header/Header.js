@@ -19,7 +19,7 @@ const Header = () => {
     return (
         <header>
             <div className='container header_container'>
-            <h5>Hellow I am</h5>
+            <h5>Hello I am</h5>
                 {
                     names.map((name, id) =>{
                         return(
